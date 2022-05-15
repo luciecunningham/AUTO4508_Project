@@ -1,7 +1,7 @@
 #!/usr/bin/env/python
 import rospy
 
-from std_msgs.msg import String
+from sensor_msgs.msg import NavSatFix
 
 
 def get_waypoints():
@@ -21,7 +21,7 @@ def publish_waypoints(pub, waypoint):
 
 def main():
     
-    pub = rospy.Publisher('waypoints_comm', String, queue_size=10)
+    pub = rospy.Publisher('waypoints_comm', NavSatFix, queue_size=10)
 
     #create node called waypoints
     rospy.init_node('waypoint')
@@ -41,5 +41,5 @@ def main():
 
 
 
-if __name__ -- "__main__":
+if __name__ == "__main__":
     main()

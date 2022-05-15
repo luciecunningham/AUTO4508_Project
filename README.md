@@ -28,6 +28,8 @@
 	`rostopic list`
 	+ To output of topic:
 	`rostopic echo /the_topic_wanted`
+3. In another terminal start GPS node
+`rosrun nmea_navsat_driver nmea_serial_driver _port:=/dev/ttyACM0 _baud=9600`
 
 
 
